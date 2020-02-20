@@ -32,7 +32,7 @@ class Student
   
   def save
     if self.id
-      #self.update
+      self.update
     else
       sql = <<-SQL
         INSERT INTO students(name, grade) VALUES(?, ?)
@@ -59,7 +59,6 @@ class Student
   end
   
   def update
-    binding.pry
     sql = <<-SQL
       UPDATE students SET name = ?, grade = ? WHERE id = ?
     SQL
