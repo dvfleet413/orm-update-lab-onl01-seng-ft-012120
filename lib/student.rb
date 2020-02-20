@@ -1,4 +1,5 @@
 require_relative "../config/environment.rb"
+require 'pry'
 
 class Student
   attr_accessor :name, :grade
@@ -47,7 +48,7 @@ class Student
   end 
   
   def self.new_from_db(row)
-    
+    binding.pry
   end
   
   def self.find_by_name(name)
